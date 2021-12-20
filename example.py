@@ -51,7 +51,7 @@ if __name__ == '__main__':
     The green led will be on until the switch is pressed the red led will be on 10second
     We also call __on__() and __off__() methods to turn on and off the leds
     '''
-
+    '''
     redpin = 13
     greenpin = 12
     switchpin = 2
@@ -68,5 +68,6 @@ if __name__ == '__main__':
             pyduino_.__on__(redpin)
             print('off')
             sleep(10)
+    '''
 
     
