@@ -21,7 +21,17 @@ pyduino is a python module that help to make arduino code using python
     Fonction: __switch__(pin)
     Argument: The number of the digital pin
     As a output this function will return the switchstate (1 if if the button is pressed or 0 otherwise).
-    An example is provide in the file example.py(Example3: Control 2 LED using a switch button. please the comment on file to understand how it's working)
+    An example is provide in the file example.py(Example3: Control 2 LED using a switch button. 
+    Please read the comment on file to understand how it's working)
+    
+
+-GET THE POTENTIOMETER VALUE:
+
+    Fonction: __pot__(pin)
+    Argument: The number of the Analog pin
+    As a output this function will return the value of the resistance of the potentiometer.
+    An example is provide in the file example.py(Example4: Control LED brightness using a potentiometer.
+    Please read the comment on file to understand how it's working)
                                                 
     
     
