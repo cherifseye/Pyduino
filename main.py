@@ -59,4 +59,7 @@ class pyduino():
             return self.pin.read()
         except:
             print('Error please check your port and make sure the arduino is connected and  you upload first Arduuino standard Firmata on the board and then run the program')
+
+
+            
             
