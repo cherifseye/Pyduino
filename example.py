@@ -44,7 +44,7 @@ if __name__ == '__main__':
 
     print('----------------------------------------------------------------------------------')
 
-    #Example 3: Control 2 LED using a switch button
+    #Example 3: Control two LED using a switch button
 
     '''
     We will make a control panel with a switch and lights turn on when you press the switch
@@ -70,4 +70,22 @@ if __name__ == '__main__':
             sleep(10)
     '''
 
-    
+    #Example 4: Control LED brightness using a potentiometer
+    '''
+     In this example we will control the brightness of the LED using a potentiometer
+     The potentiometer will be connected to analog pin A0 and the LED will be connected to digital pin 13
+     we will use a resistance to connect the potentiometer to the LED and allows us to set the resistance min to 222ohm then our led will not break
+     We also provide a another complete example using GUI pyqt5 named SETUX wich is very helpful for beginner who want to contol their Arduino and their
+     own board control.
+     You can find this example in my git github repository named SETUX
+     '''
+
+    '''
+     redpin = 13
+     potpin = '0'
+     while True:
+         potvalue = pyduino_.__pot__(potpin)
+         pyduino_.__on__(redpin)
+         if potvalue is not None:
+             print(potvalue)
+     '''
