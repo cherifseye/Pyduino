@@ -22,9 +22,16 @@ class pyduino():
             self.pin.write(1)
         except:
             print('Error please check your port and make sure the arduino is connected and  you upload first Arduuino standard Firmata on the board and then run the program')
+        '''
+        This function turns off a led
+        Argument: digital pin number
+        '''
 
-    
     def __off__(self, pin):
+        '''
+        This function turns off a led
+        Argument: digital pin number
+        '''
         try:
             board = Arduino(self.port)
             it = util.Iterator(board)
@@ -37,6 +44,10 @@ class pyduino():
  
     
     def __switch__(self, pin):
+        '''
+        This function gives you the state of a switch (1 or 0)
+        Argument: digital pin number
+        '''
         try:
             board = Arduino(self.port)
             it = util.Iterator(board)
@@ -50,6 +61,11 @@ class pyduino():
 
 
     def __pot__(self, pin):
+        '''
+        This function gives you the value of a potentiometer
+        Argument: analog pin number
+        '''
+
         try:
             board = Arduino(self.port)
             it = util.Iterator(board)
@@ -60,6 +76,40 @@ class pyduino():
         except:
             print('Error please check your port and make sure the arduino is connected and  you upload first Arduuino standard Firmata on the board and then run the program')
 
+        try:
+            board = Arduino(self.port)
+            it = util.Iterator(board)
+            it.start()
+            pin = str(pin)
+            self.pin = board.get_pin('a:'+pin+':i')
+            return self.pin.read()
+
+        except:
+            print('Error please check your port and make sure the arduino is connected and  you upload first Arduuino standard Firmata on the board and then run the program')
+
+    def __tmp102__(self, pin, unity):
+        '''
+        This function gives you the value of a temperature sensor
+        Argument: analog pin number
+        unniity: c or f
+        '''
+        try:
+            board = Arduino(self.port)
+            it = util.Iterator(board)
+            it.start()
+            pin = str(pin)
+            self.pin = board.get_pin('a:'+pin+':i')
+            sensorVal = self.pin.read()
+            voltage = sensorVal * 5.0
+            if unity == 'C'.lower():
+                temp = (voltage - 0.5) * 100
+                return temp
+            elif unity == 'F'.lower():
+                temp = (voltage - 0.5) * 100 * 9/5 + 32
+                return temp
+
+        except:
+            print('Error please check your port and make sure the arduino is connected and  you upload first Arduuino standard Firmata on the board and then run the program')
 
             
             

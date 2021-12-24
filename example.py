@@ -89,3 +89,34 @@ if __name__ == '__main__':
          if potvalue is not None:
              print(potvalue)
      '''
+
+    print('----------------------------------------------------------------------------------')
+
+    #Example 5: The temperature monitor using a tmp102 sensor
+
+    '''
+    In this example we will use a tmp102 sensor to monitor the temperature we'll also use 2 leds (green and red)
+    The tmp102 sensor is connected to analog pin A0 and the leds are connected to digital pins 9 and 10
+    as s output in the terminal you can get the temperature value in celsius or fahrenheit (unity == 'c' or 'f')
+    '''
+
+    '''
+    redpin = 9
+    greenpin = 10
+    tempPin = 0
+    tempref = 20
+    unity = 'c'
+    while True:
+        tempValue = pyduino_.__temp__(tempPin, unity)
+        if tempValue is not None:
+            if tempValue > tempref:
+                pyduino_.__on__(redpin)
+                pyduino_.__off__(greenpin)
+                print('red')
+            else:
+                pyduino_.__on__(greenpin)
+                pyduino_.__off__(redpin)
+                print('green')
+    '''
+        
+
