@@ -33,7 +33,16 @@ pyduino is a python module that help to make arduino code using python
     An example is provide in the file example.py(Example4: Control LED brightness using a potentiometer.
     Please read the comment on file to understand how it's working)
                                                 
-    
-    
-
+                                                
+                                      
+-GET TEMPERATURE VALUE USING TMP102 SENSOR
+   
+    Fonction: __tmp102__(pin, unity)
+    Argument: 
+            -pin: The number of the Analog pin
+            -unity: the unity that you want get you temperature (F for farenheit) and (C for celsius)
+    As a output this function will return the value of the temperature in farenheit or celsius 
+    An example is provide in the file example.py(Example5: The temperature monitor using a tmp102 sensor.
+    Please read the comment on file to understand how it's working)
+   
      
