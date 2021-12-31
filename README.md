@@ -49,4 +49,37 @@ pyduino is a python module that help to make arduino code using python
     An example is provide in the file example.py(Example5: The temperature monitor using a tmp102 sensor.
     Please read the comment on file to understand how it's working)
    
+   
+-GET PIR SENSOR MOVE DETECTION
+    
+    Fontion: --HC_SR04PIR__(pin):
+    Argument:
+            pin: The number of the digital pin
+    As a output you'll get the the value of the pir sensor.
+    An example is provide in the file example.py(Example6: Move dection using pir sensor.
+    Please read the comment on file to understand how it's working)
+    
+    
+-GET POSTION USING ANALOG JOYSTICK
+
+      Fonction: __tmp102__(pin, unity)
+      Argument: 
+            -swpin: The number of the digital pin
+            -Xpin: The number of analog pin for X position
+            -Ypin: The number of analog pin for Y position
+      As a output this function will return the position of your analog joystick
+      An example is provide in the file example.py(Exampl7: Analog joystick position.
+      Please read the comment on file to understand how it's working)
+      
+      
+-GET WATER LEVEL
+
+     Fonction: __tmp102__(pin, unity)
+     Argument: 
+            -pin: The number of the Analog pin
+     As a output this function will return the value of the water level 
+     An example is provide in the file example.py(Example8: get water level ADC.
+     Please read the comment on file to understand how it's working)
+    
+   
      
