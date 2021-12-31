@@ -136,7 +136,26 @@ if __name__ == '__main__':
     pirValue = pyduino_.__HC_SR04__(pirpin)
     while True:
         ledpin.write(pirValue)
-         
+        print(pirValue)
+    '''
+
+    #Example 7: Analog joystick postion
+
+    '''
+    In this example we show you how to use the analog joystick method may be you'll need it to control your robot or drone one day
+    for the pin we connect:
+    A0 = X axis
+    A1 = Y axis
+    2 = sw_pin
+    '''
+
+    '''
+    xpin = 0
+    ypin = 1
+    swpin = 2
+    while True:
+        position = pyduino.__analog_joystick__(swpin, xpin, ypin)
+        print(position)
     '''
         
 
