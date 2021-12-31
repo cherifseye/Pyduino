@@ -110,6 +110,24 @@ class pyduino():
 
         except:
             print('Error please check your port and make sure the arduino is connected and  you upload first Arduuino standard Firmata on the board and then run the program')
+        
+    
 
+    def __HC_SR01PIR__(self, pin):
+        '''
+        This function gives you the value of a HC-SR04 sensor
+        Argument: digital pin number
+        '''
+        try:
+            board = Arduino(self.port)
+            it = util.Iterator(board)
+            it.start()
+            pin = str(pin)
+            self.pin = board.get_pin('d:'+pin+':i')
+            pirvalue = self.pin.read()
+            if pirvalue is not None:
+                return pirvalue
+        except:
+            print('Error please check your port and make sure the arduino is connected and  you upload first Arduuino standard Firmata on the board and then run the program')
             
             

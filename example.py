@@ -8,6 +8,7 @@ SETUX CORPORATION GROUP
 import main
 from time import sleep
 
+
 pyduino_ = main.pyduino('/dev/cu.usbmodem142301')
 print('----------------------------------------------------------------------------------')
 
@@ -97,7 +98,7 @@ if __name__ == '__main__':
     '''
     In this example we will use a tmp102 sensor to monitor the temperature we'll also use 2 leds (green and red)
     The tmp102 sensor is connected to analog pin A0 and the leds are connected to digital pins 9 and 10
-    as s output in the terminal you can get the temperature value in celsius or fahrenheit (unity == 'c' or 'f')
+    as a output in the terminal you can get the temperature value in celsius or fahrenheit (unity == 'c' or 'f')
     '''
 
     '''
@@ -117,6 +118,25 @@ if __name__ == '__main__':
                 pyduino_.__on__(greenpin)
                 pyduino_.__off__(redpin)
                 print('green')
+    '''
+    
+    #Example 6: Move detection using pir sensor
+    '''
+    In this example we will use a pir sensor to detect if someone is moving in the room we'll also use a green led
+    The pir sensor is connected to digital pin 7 and the led is connected to digital pin 13
+    If the pir sensor detects a movement the led will turn on
+    '''
+
+    '''
+    board = Arduino(self.port)
+    it = util.Iterator(board)
+    it.start()
+    ledpin = board.get_pin('d:13:o')
+    pirpin = 7
+    pirValue = pyduino_.__HC_SR04__(pirpin)
+    while True:
+        ledpin.write(pirValue)
+         
     '''
         
 
