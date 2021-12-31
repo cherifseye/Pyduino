@@ -157,5 +157,19 @@ if __name__ == '__main__':
         position = pyduino.__analog_joystick__(swpin, xpin, ypin)
         print(position)
     '''
+
+    #Example 8: Water level detection using a water level sensor
+
+    '''
+    In this example we will use a water level sensor to detect the level of a water
+    '''
+
+    '''
+    waterpin = 0
+    while True:
+        waterlevel = pyduino.__waterlevel__(waterpin)
+        print(f'water level is {waterlevel}')
+    
+    '''
         
 
