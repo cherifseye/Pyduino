@@ -171,5 +171,3 @@ if __name__ == '__main__':
         print(f'water level is {waterlevel}')
     
     '''
-        
-
