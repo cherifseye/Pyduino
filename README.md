@@ -62,7 +62,7 @@ pyduino is a python module that help to make arduino code using python
     
 -GET POSTION USING ANALOG JOYSTICK
 
-      Fonction: __tmp102__(pin, unity)
+      Fonction: __analogJoystick__(pin, unity)
       Argument: 
             -swpin: The number of the digital pin
             -Xpin: The number of analog pin for X position
@@ -74,7 +74,7 @@ pyduino is a python module that help to make arduino code using python
       
 -GET WATER LEVEL
 
-     Fonction: __tmp102__(pin, unity)
+     Fonction: __waterlevel__(pin, unity)
      Argument: 
             -pin: The number of the Analog pin
      As a output this function will return the value of the water level 
